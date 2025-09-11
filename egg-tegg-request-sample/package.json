@@ -1,0 +1,31 @@
+{
+  "name": "egg-tegg-request-sample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example: GET/POST with three params, service logs, @Middleware adds timestamp t, AOP logging",
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "dev": "egg-bin dev --ts",
+    "test": "egg-bin test --ts",
+    "start": "egg-bin dev --ts"
+  },
+  "dependencies": {
+    "@eggjs/tegg": "^3.0.0",
+    "@eggjs/tegg-aop-plugin": "^3.61.0",
+    "@eggjs/tegg-config": "^3.0.0",
+    "@eggjs/tegg-controller-plugin": "^3.0.0",
+    "@eggjs/tegg-plugin": "^3.0.0",
+    "egg": "^3.0.0"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "^1.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.11.0",
+    "egg-bin": "^6.13.0",
+    "egg-mock": "^5.10.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

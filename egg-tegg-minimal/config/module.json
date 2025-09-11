@@ -1,0 +1,4 @@
+[
+  { "path": "../app/modules/hello" },
+  { "path": "../app/modules/user", "optional": true }
+]
