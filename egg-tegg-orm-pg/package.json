@@ -1,0 +1,34 @@
+{
+  "name": "egg-tegg-orm-pg",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Egg + Tegg + ORM (Leoric) with PostgreSQL example",
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "dev": "egg-bin dev --ts",
+    "test": "egg-bin test --ts",
+    "start": "egg-bin dev --ts"
+  },
+  "dependencies": {
+    "egg": "^3.0.0",
+    "@eggjs/tegg": "^3.0.0",
+    "@eggjs/tegg-plugin": "^3.0.0",
+    "@eggjs/tegg-controller-plugin": "^3.0.0",
+    "@eggjs/tegg-config": "^3.0.0",
+    "@eggjs/tegg-orm-plugin": "^3.0.0",
+    "@eggjs/tegg-orm-decorator": "^3.0.0",
+    "leoric": "^2.13.6",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "egg-bin": "^6.4.0",
+    "egg-mock": "^5.10.9",
+    "@eggjs/tsconfig": "^1.0.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.11.0"
+  }
+}
