@@ -1,0 +1,31 @@
+{
+  "name": "egg-tegg-schedule-sample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Egg + Tegg schedule example: interval and cron with type worker/all",
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "dev": "egg-bin dev --ts",
+    "test": "egg-bin test --ts",
+    "start": "egg-bin dev --ts"
+  },
+  "dependencies": {
+    "egg": "^3.0.0",
+    "@eggjs/tegg": "^3.61.0",
+    "@eggjs/tegg-plugin": "^3.61.0",
+    "@eggjs/tegg-config": "^3.61.0",
+    "@eggjs/tegg-schedule-plugin": "^3.61.0",
+    "egg-schedule": "^4.0.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^6.13.0",
+    "egg-mock": "^5.10.9",
+    "@eggjs/tsconfig": "^1.0.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.11.0"
+  }
+}
