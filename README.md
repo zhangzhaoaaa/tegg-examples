@@ -27,3 +27,9 @@ tegg 的使用例子。下面列出当前目录中的每个示例项目，包含
 - 使用到的装饰器：
   - @Schedule（声明任务）、ScheduleType（任务运行维度）
   - @Inject（注入 logger 等）
+
+## [egg-tegg-hackernews-async-ts](./egg-tegg-hackernews-async-ts/)
+- 功能：HackerNews 异步示例，服务端模板渲染（Nunjucks），包含首页列表、新闻详情、用户信息页面；通过 ctx.curl 调用 HN API 并分页。
+- 使用到的装饰器：
+  - @HTTPController、@HTTPMethod、@HTTPQuery、@HTTPParam、@Context、@Inject（控制器）
+  - @SingletonProto（Service 单例，accessLevel: PUBLIC）

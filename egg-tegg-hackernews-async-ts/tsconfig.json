@@ -1,0 +1,8 @@
+{
+  "extends": "@eggjs/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "."
+  },
+  "include": ["app", "config", "test", "typings"]
+}
