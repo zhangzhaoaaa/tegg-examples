@@ -33,3 +33,10 @@ tegg 的使用例子。下面列出当前目录中的每个示例项目，包含
 - 使用到的装饰器：
   - @HTTPController、@HTTPMethod、@HTTPQuery、@HTTPParam、@Context、@Inject（控制器）
   - @SingletonProto（Service 单例，accessLevel: PUBLIC）
+
+## [egg-tegg-todomvc](./egg-tegg-todomvc/)
+- 功能：前后端一体的 TodoMVC 示例。前端静态页面（index.html + app.js），后端提供 REST API（/api/todos...），并通过 ORM（SQLite）持久化数据。
+- 使用到的装饰器：
+  - @HTTPController、@HTTPMethod、@HTTPBody、@HTTPParam、@Context（控制器与入参）
+  - @Inject、@SingletonProto（依赖注入与服务）
+  - @Model、@Attribute（ORM 模型）

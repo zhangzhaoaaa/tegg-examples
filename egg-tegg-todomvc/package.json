@@ -1,0 +1,38 @@
+{
+  "name": "egg-tegg-todomvc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TodoMVC implemented with Egg + Tegg (controller/service, static frontend)",
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "dev": "egg-bin dev --ts",
+    "start": "egg-bin dev --ts",
+    "test": "egg-bin test --ts",
+    "init:db": "node scripts/init-db.js"
+  },
+  "dependencies": {
+    "@eggjs/tegg": "^3.0.0",
+    "@eggjs/tegg-config": "^3.0.0",
+    "@eggjs/tegg-controller-plugin": "^3.0.0",
+    "@eggjs/tegg-orm-decorator": "^3.0.0",
+    "@eggjs/tegg-orm-plugin": "^3.0.0",
+    "@eggjs/tegg-plugin": "^3.0.0",
+    "better-sqlite3": "^12.2.0",
+    "egg": "^3.0.0",
+    "leoric": "^2.13.6",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "^1.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.11.0",
+    "egg-bin": "^6.13.0",
+    "egg-mock": "^5.10.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
