@@ -7,7 +7,10 @@ export enum UserRole {
   OPERATOR = 'operator',     // 商品运营者
 }
 
-@Model()
+@Model({
+  dataSource: 'product',
+  tableName: 'users',
+})
 export class User extends Bone {
   @Attribute(DataTypes.STRING as any, { primary: true })
   id: string;

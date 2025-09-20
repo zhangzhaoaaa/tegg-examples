@@ -37,7 +37,7 @@ export class CartController {
   async addToCart(@Context() ctx: EggContext, @HTTPBody() body: any) {
     const auth = await this.verifyAuth(ctx, ['consumer']);
     if (auth.error) {
-      return { error: auth.error };
+      return { success: false, message: auth.error };
     }
 
     try {
@@ -45,7 +45,7 @@ export class CartController {
       
       if (!product_id || !quantity || quantity <= 0) {
         ctx.status = 400;
-        return { error: '商品ID和数量不能为空，且数量必须大于0' };
+        return { success: false, message: '商品ID和数量不能为空，且数量必须大于0' };
       }
 
       const cartItem = await this.cartService.addToCart(auth.id, {
@@ -53,10 +53,10 @@ export class CartController {
         quantity: quantity
       });
       
-      return { message: '商品已添加到购物车', cart_item: cartItem };
+      return { success: true, message: '商品已添加到购物车', data: { cart_item: cartItem } };
     } catch (error: any) {
       ctx.status = 400;
-      return { error: '添加到购物车失败' };
+      return { success: false, message: '添加到购物车失败' };
     }
   }
 
@@ -65,15 +65,15 @@ export class CartController {
   async getCart(@Context() ctx: EggContext) {
     const auth = await this.verifyAuth(ctx, ['consumer']);
     if (auth.error) {
-      return { error: auth.error };
+      return { success: false, message: auth.error };
     }
 
     try {
       const cartItems = await this.cartService.getCartItems(auth.id);
-      return { cart_items: cartItems };
+      return { success: true, data: { cart_items: cartItems } };
     } catch (error: any) {
       ctx.status = 500;
-      return { error: '获取购物车失败' };
+      return { success: false, message: '获取购物车失败' };
     }
   }
 

@@ -1,7 +1,10 @@
 import { Attribute, Model } from '@eggjs/tegg-orm-decorator';
 import { Bone, DataTypes } from 'leoric';
 
-@Model()
+@Model({
+  dataSource: 'product',
+  tableName: 'products',
+})
 export class Product extends Bone {
   @Attribute(DataTypes.STRING as any, { primary: true })
   id: string;

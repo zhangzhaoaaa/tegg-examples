@@ -1,0 +1,48 @@
+{
+  "name": "product-management-web",
+  "version": "1.0.0",
+  "description": "商品管理系统前端",
+  "scripts": {
+    "build": "umi build",
+    "dev": "umi dev",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "start": "npm run dev",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@ant-design/pro-components": "^2.8.10",
+    "@umijs/max": "^4.0.87",
+    "antd": "^5.12.8",
+    "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@umijs/lint": "^4.0.87",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "yorkie": "^2.0.0"
+  }
+}

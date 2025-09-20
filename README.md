@@ -40,3 +40,10 @@ tegg 的使用例子。下面列出当前目录中的每个示例项目，包含
   - @HTTPController、@HTTPMethod、@HTTPBody、@HTTPParam、@Context（控制器与入参）
   - @Inject、@SingletonProto（依赖注入与服务）
   - @Model、@Attribute（ORM 模型）
+
+## [egg-tegg-product-management](./egg-tegg-product-management/)
+- 功能：全栈商品管理系统，支持多角色用户管理（管理员/商家/消费者）、商品管理、购物车、订单管理等完整电商功能。前端使用 React + Umi + Ant Design，后端基于 Egg.js + Tegg + PostgreSQL/SQLite。
+- 使用到的装饰器：
+  - @HTTPController、@HTTPMethod、@HTTPBody、@HTTPParam、@HTTPQuery、@Context（RESTful API 控制器）
+  - @Inject、@SingletonProto（依赖注入与服务层）
+  - @Model、@Attribute（ORM 模型与字段定义，支持用户、商品、订单、购物车等实体）

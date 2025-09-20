@@ -1,0 +1,436 @@
+.product-management-page {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    
+    .ant-typography {
+      color: white !important;
+      margin-bottom: 0;
+    }
+
+    .ant-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+      }
+
+      .anticon {
+        color: white;
+      }
+    }
+  }
+
+  .ant-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: none;
+
+    .ant-card-body {
+      padding: 24px;
+    }
+  }
+
+  .ant-table {
+    .ant-table-thead > tr > th {
+      background: #fafafa;
+      border-bottom: 2px solid #f0f0f0;
+      font-weight: 600;
+      color: #262626;
+      padding: 16px;
+    }
+
+    .ant-table-tbody > tr {
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #f8f9ff;
+      }
+
+      > td {
+        border-bottom: 1px solid #f5f5f5;
+        padding: 16px;
+      }
+    }
+  }
+  
+  .product-images {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    .ant-image {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #f0f0f0;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #1890ff;
+        transform: scale(1.05);
+      }
+    }
+
+    .no-image {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      border-radius: 8px;
+      color: #999;
+      font-size: 12px;
+      border: 2px dashed #d9d9d9;
+    }
+  }
+
+  .ant-space {
+    .ant-btn {
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+
+      &.ant-btn-link {
+        padding: 4px 8px;
+        height: auto;
+
+        &:hover {
+          background: rgba(24, 144, 255, 0.1);
+        }
+
+        &.ant-btn-dangerous:hover {
+          background: rgba(255, 77, 79, 0.1);
+        }
+      }
+    }
+  }
+
+  .ant-tag {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 2px 8px;
+
+    &.ant-tag-success {
+      background: #f6ffed;
+      border-color: #b7eb8f;
+      color: #52c41a;
+    }
+
+    &.ant-tag-warning {
+      background: #fff7e6;
+      border-color: #ffd591;
+      color: #fa8c16;
+    }
+
+    &.ant-tag-error {
+      background: #fff2f0;
+      border-color: #ffccc7;
+      color: #ff4d4f;
+    }
+  }
+  
+  // 模态框样式
+  .ant-modal {
+    .ant-modal-header {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 20px 24px;
+
+      .ant-modal-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #262626;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 24px;
+    }
+
+    .ant-modal-footer {
+      border-top: 1px solid #f0f0f0;
+      padding: 16px 24px;
+
+      .ant-btn {
+        border-radius: 6px;
+        font-weight: 500;
+        height: 36px;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  // 表单样式
+  .ant-form {
+    .ant-form-item {
+      margin-bottom: 20px;
+
+      .ant-form-item-label {
+        padding-bottom: 8px;
+
+        > label {
+          font-weight: 500;
+          color: #262626;
+        }
+      }
+
+      .ant-input,
+      .ant-input-number,
+      .ant-select-selector {
+        border-radius: 6px;
+        border: 1px solid #d9d9d9;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: #40a9ff;
+        }
+
+        &:focus,
+        &.ant-input-focused,
+        &.ant-select-focused .ant-select-selector {
+          border-color: #1890ff;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+      }
+
+      .ant-input-number {
+        width: 100%;
+      }
+    }
+  }
+  
+  // 上传组件样式
+  .ant-upload {
+    &.ant-upload-select-picture-card {
+      width: 104px;
+      height: 104px;
+      border-radius: 8px;
+      border: 2px dashed #d9d9d9;
+      background: #fafafa;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #1890ff;
+        background: #f0f8ff;
+      }
+      
+      .ant-upload {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .anticon {
+          font-size: 24px;
+          color: #999;
+          margin-bottom: 8px;
+        }
+
+        .ant-upload-text {
+          color: #666;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  .ant-upload-list {
+    &.ant-upload-list-picture-card {
+      .ant-upload-list-item {
+        width: 104px;
+        height: 104px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #f0f0f0;
+
+        &:hover {
+          border-color: #1890ff;
+        }
+
+        .ant-upload-list-item-thumbnail {
+          img {
+            border-radius: 6px;
+          }
+        }
+
+        .ant-upload-list-item-actions {
+          background: rgba(0, 0, 0, 0.6);
+
+          .anticon {
+            color: white;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 移动端适配
+@media (max-width: 768px) {
+  .product-management-page {
+    padding: 16px;
+
+    .page-header {
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+      padding: 20px 16px;
+      
+      .ant-btn {
+        width: 100%;
+        height: 40px;
+      }
+    }
+    
+    .ant-card {
+      .ant-card-body {
+        padding: 16px;
+      }
+    }
+
+    // 表格在移动端的适配
+    .ant-table-wrapper {
+      .ant-table {
+        font-size: 12px;
+        
+        .ant-table-thead > tr > th,
+        .ant-table-tbody > tr > td {
+          padding: 8px 4px;
+        }
+        
+        .product-images {
+          .ant-image,
+          .no-image {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        
+        .ant-space {
+          .ant-btn {
+            padding: 0 4px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    // 模态框在移动端的适配
+    .ant-modal {
+      margin: 0;
+      max-width: 100vw;
+      top: 0;
+
+      .ant-modal-content {
+        border-radius: 0;
+      }
+
+      .ant-modal-header,
+      .ant-modal-body,
+      .ant-modal-footer {
+        padding: 16px;
+      }
+    }
+
+    // 上传组件移动端适配
+    .ant-upload {
+      &.ant-upload-select-picture-card {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .ant-upload-list {
+      &.ant-upload-list-picture-card {
+        .ant-upload-list-item {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+
+// 深色主题适配
+@media (prefers-color-scheme: dark) {
+  .product-management-page {
+    background: #141414;
+
+    .ant-card {
+      background: #1f1f1f;
+      border-color: #303030;
+
+      .ant-card-body {
+        background: #1f1f1f;
+      }
+    }
+
+    .ant-table {
+      .ant-table-thead > tr > th {
+        background: #262626;
+        color: #fff;
+        border-bottom-color: #303030;
+      }
+
+      .ant-table-tbody > tr {
+        &:hover {
+          background: #262626;
+        }
+
+        > td {
+          border-bottom-color: #303030;
+          background: #1f1f1f;
+          color: #fff;
+        }
+      }
+    }
+
+    .product-images {
+      .no-image {
+        background: linear-gradient(135deg, #262626 0%, #1f1f1f 100%);
+        color: #8c8c8c;
+        border-color: #404040;
+      }
+    }
+  }
+}
+
+// 表格操作按钮样式
+.ant-table {
+  .ant-btn-link {
+    padding: 0;
+    height: auto;
+    
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+// 商品详情模态框样式
+.ant-modal-body {
+  .ant-image {
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+  }
+}

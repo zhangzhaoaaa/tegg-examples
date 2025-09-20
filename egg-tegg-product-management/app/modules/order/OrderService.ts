@@ -1,4 +1,4 @@
-import { SingletonProto } from '@eggjs/tegg';
+import { SingletonProto, AccessLevel } from '@eggjs/tegg';
 import { Order } from './model/Order';
 import { Product } from '../product/model/Product';
 
@@ -28,7 +28,7 @@ export interface OrderFilters {
   merchant_id?: string;
 }
 
-@SingletonProto()
+@SingletonProto({ accessLevel: AccessLevel.PUBLIC })
 export class OrderService {
 
   // 创建订单

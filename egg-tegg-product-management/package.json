@@ -1,0 +1,46 @@
+{
+  "name": "egg-tegg-product-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Product management system with Egg.js + Tegg + SQLite",
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "dev": "egg-bin dev --ts",
+    "dev-egg": "egg-bin dev --ts",
+    "test": "egg-bin test --ts",
+    "start": "egg-bin start"
+  },
+  "dependencies": {
+    "@eggjs/tegg": "^3.0.0",
+    "@eggjs/tegg-config": "^3.0.0",
+    "@eggjs/tegg-controller-plugin": "^3.0.0",
+    "@eggjs/tegg-orm-decorator": "^3.0.0",
+    "@eggjs/tegg-orm-plugin": "^3.0.0",
+    "@eggjs/tegg-plugin": "^3.0.0",
+    "bcryptjs": "^2.4.3",
+    "egg": "^3.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "leoric": "^2.13.8",
+    "pg": "^8.16.3",
+    "pg-types": "^4.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "^1.0.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.11.0",
+    "egg-bin": "^6.4.0",
+    "egg-mock": "^5.10.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "get-ready": "2.0.1"
+    }
+  }
+}

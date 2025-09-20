@@ -18,7 +18,7 @@ run
 .nyc_output/
 dist
 
-**/*.d.ts
+# **/*.d.ts
 core/**/dist
 plugin/**/dist
 

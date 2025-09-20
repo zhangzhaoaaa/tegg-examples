@@ -1,0 +1,6 @@
+[
+  { "path": "../app/modules/user" },
+  { "path": "../app/modules/product" },
+  { "path": "../app/modules/order" },
+  { "path": "../app/modules/cart" }
+]
